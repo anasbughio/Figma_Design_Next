@@ -1,0 +1,198 @@
+/* =========================================
+   SPECIALIZED SECTION
+   ========================================= */
+
+.specialized-section {
+    background: #f1f5f9;
+    
+}
+
+.specialized-section h2 {
+    font-size: 46px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 50px;
+}
+.feature-image {
+    position: relative; /* Add this to ensure your 98% card stays attached to the image */
+}
+
+.specialized-section p{
+    margin-top: 25px;
+}
+
+/* Tab Container Styles */
+.specialized-section .tab {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 15px 25px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.specialized-section .tab.active {
+    background-color: #fff;
+    border-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 30px 25px;
+}
+
+/* Tab Header (Number and Title) */
+.tab-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.num-badge {
+    background-color: #e11d48;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.tab-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+/* Tab Content (Hidden by default) */
+.specialized-section .tab-content {
+    display: none;
+    margin-top: 15px;
+}
+
+.specialized-section .tab.active .tab-content {
+    display: block;
+}
+
+.specialized-section .tab-content h3 {
+    font-size: 26px;
+    color: #0f172a;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    margin-top: 10px;
+}
+
+.specialized-section .tab-content p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.specialized-section .learn-more {
+    color: #e11d48;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.feature-image .main-img1 {
+    width: 80%;
+    height: 500px;
+    border-radius: 15px;
+    display: block;
+    object-fit: cover;
+    margin-left: auto; /* THIS IS THE MAGIC FIX: Pushes the image to the right edge */
+}
+
+.top-left-card {
+    width: 140px;
+    height: 140px;
+    padding: 30px;
+    top: 25%;
+    transform: translateY(-50%);
+    left: 40px;
+}
+
+.vector_img{
+    width: 80px;
+    height:80px
+}
+
+.bottom-right-card {
+    width: 247px;
+    height: 85px;
+    padding: 18px;
+    bottom: 70px;
+    left: 320px;
+    gap: 10px;
+}
+
+@media (max-width: 1300px){
+    .ds_none {
+        display: none !important;
+    }
+}
+
+/* --- Specialized Section Media Queries --- */
+@media (max-width: 768px) {
+.specialized-section h2 {
+        font-size: 28px !important; /* Dropped slightly so 'specialized' fits easily */
+        line-height: 1.3;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        padding: 0; /* Let the .container handle the edge spacing */
+    }
+
+    /* 2. Fix the sub-paragraph */
+    .specialized-section p {
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0; /* Remove double-padding here too */
+    }
+
+    /* 3. Stack the tabs and image column */
+    .specialized-section .flex-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* 4. Fix Tab spacing for touch/mobile */
+    .specialized-section .tab {
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    .specialized-section .tab.active {
+        padding: 20px; /* Less drastic expansion on mobile */
+    }
+
+    /* 5. Adjust Tab Content text size */
+    .specialized-section .tab-content h3 {
+        font-size: 22px;
+    }
+
+    /* 6. Ensure the image column fills the width */
+    .feature-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .feature-image .main-img1 {
+        width: 100%;
+        height: auto;
+        min-height: 250px;
+    }
+
+    /* 7. Hide floating decorative cards on mobile for a cleaner look */
+    .top-left-card, 
+    .bottom-right-card {
+        display: none !important;
+    }
+
+    
+    /* You may want to hide the bottom right card on mobile too, depending on how it fits! */
+    .bottom-right-card {
+        display: none; 
+    }
+}

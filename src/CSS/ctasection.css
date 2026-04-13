@@ -1,0 +1,91 @@
+/* =========================================
+   CTA SECTION & SPACER
+   ========================================= */
+
+/* Provides background space for the overlapping video from the previous section */
+.video-spacer {
+    height: 300px;
+}
+
+.white-bg {
+    background-color: #fff;
+    color: #333;
+}
+
+.cta-section {
+    position: relative;
+    background: #f1f5f9;
+    overflow: hidden;
+}
+
+.cta-section h2 {
+    font-size: 46px;
+    font-family: "Montserrat", sans-serif;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    color: #64748b;
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-family: "Roboto", sans-serif !important;
+    line-height: 1.5;
+}
+
+.cta-section .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 2; /* Keeps the text and button above the decorative arrows */
+}
+
+/* --- Decorative Arrows --- */
+.cta-content-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-arrow {
+    position: absolute;
+    z-index: 1; /* Keeps them behind the main content if they overlap */
+    width: 340px;
+}
+
+.arrow-left {
+    bottom: -60px;
+    left: -500px;
+}
+
+.arrow-right {
+    top: -260px;
+    right: -500px;
+}
+
+/* --- CTA Media Queries --- */
+@media (max-width: 768px) {
+    /* Shrink the spacer since the overlapping video is smaller on mobile */
+    .video-spacer {
+        height: 120px; 
+        background-color: #ffffff; 
+    }
+
+    .cta-section .container {
+        padding-top: 60px; 
+        padding-bottom: 80px;
+    }
+
+    .cta-section h2 {
+        font-size: 32px;
+    }
+
+    .cta-content-wrapper {
+        max-width: 100%;
+    }
+
+    /* Hide the decorative arrows on mobile so they don't break the layout */
+    .cta-arrow {
+        display: none;
+    }
+}

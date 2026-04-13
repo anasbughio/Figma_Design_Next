@@ -1,0 +1,91 @@
+/* =========================================
+   GLOBAL UTILITY CLASSES (Used by Speed Section)
+   ========================================= */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.col-half {
+    flex: 1;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.dark-bg {
+    background-color: #0f172a;
+    color: white;
+}
+
+/* =========================================
+   SPEED SECTION SPECIFICS
+   ========================================= */
+.speed-header {
+    width: 100%;
+    margin-bottom: 50px; 
+}
+
+.speed-header h2 {
+    font-size: 46px; 
+    color: white;
+    line-height: 1.2;
+    font-family: "Montserrat", sans-serif;
+}
+
+.speed-section .text-content p {
+    color: #e2e8f0; 
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.speed-section .text-content strong {
+    color: white;
+    font-size: 18px;
+}
+
+
+.speed-section .illustration img {
+    width: 100%;        /* Tells the image to fill the available space */
+    max-width: 500px;   /* Stops the image from getting too huge on massive desktop screens */
+    height: auto;       /* Ensures the image doesn't stretch or squish weirdly */
+    display: block;
+    margin: 0 auto;     /* Centers the image perfectly inside its column */
+}
+
+/* --- Speed Section Media Queries --- */
+@media (max-width: 768px) {
+    /* Stack the flex row into a column for mobile */
+    .flex-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+
+    .speed-header {
+        margin-bottom: 30px;
+    }
+
+    .speed-header h2 {
+        font-size: 35px; /* Keeping it large on mobile as you had it */
+    }
+}
