@@ -1,0 +1,132 @@
+/* =========================================
+   STATS SECTION
+   ========================================= */
+.stats-section .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Forces the heading, paragraph, and button to align flush left */
+    justify-content: center;
+    text-align: left; /* Ensures the text itself reads left-to-right cleanly */
+}
+
+.stats-section .text-content h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #0f172a;
+    font-family: "Montserrat", sans-serif;
+    max-width: 400px; /* Keeps the heading contained so it naturally wraps like the image */
+}
+
+.stats-section .text-content p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 450px; /* Prevents the paragraph from stretching too wide */
+}
+
+.stats-section .text-content .btn-primary {
+    align-self: flex-start; 
+}
+
+.light-bg {
+    background-color: #f8fafc;
+    color: #333;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    background: #f1f5f9; 
+    padding: 50px; 
+    gap: 20px;
+    border-radius: 15px;
+    align-items: start;
+    width: 100%;
+    max-width: 600px; 
+}
+
+.stat-card {
+    background: white;
+    padding: 40px 20px; 
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* This creates the staggered zigzag look! */
+.stat-card:nth-child(even) {
+    transform: translateY(30px);
+}
+
+.stat-card h3 {
+    font-size: 36px;
+    color: #0f172a;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.stat-card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --- Stats Section Media Queries --- */
+@media (max-width: 768px) {
+  .stats-section .flex-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* 2. Grid & Card Fixes: Stack in one column and remove stagger */
+    .stats-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        padding: 20px;
+        width: 100%;
+        gap: 15px; /* Tighter gap for stacked cards */
+    }
+
+    .stat-card {
+        width: 100%; /* Force full width inside the grid */
+        padding: 30px 20px; /* Slightly tighter padding */
+    }
+
+    .stat-card:nth-child(even) {
+        transform: none; /* Remove zigzag */
+    }
+
+    /* 3. Text Content Adjustments */
+    .stats-section .text-content {
+        align-items: center; /* Center everything on mobile */
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .stats-section .text-content h2 {
+        font-size: 32px !important;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .stats-section .text-content p {
+        font-size: 16px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    /* 4. Button Fixes */
+    .stats-section .text-content .btn-primary {
+        align-self: center; /* Override the flex-start to center it */
+        width: 85%;
+        max-width: 300px;
+        padding: 15px;
+    }
+}

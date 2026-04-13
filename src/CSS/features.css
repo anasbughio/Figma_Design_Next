@@ -1,0 +1,208 @@
+/* =========================================
+   FEATURES SECTION
+   ========================================= */
+
+.features {
+    background-color: #f4f6f8;
+    padding: 80px 50px;
+}
+
+.features-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.features-header h2 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.features-layout {
+    display: flex;
+    gap: 130px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+/* --- Interactive Tabs Styles --- */
+.feature-tabs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tab {
+    background: transparent;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.tab p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.tab-badge {
+    display: none;
+    background-color: #e11d48;
+    color: white;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.learn-more {
+    color: #e11d48;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Active Tab Status */
+.tab.active {
+    background: white;
+    border-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.tab.active .tab-badge,
+.tab.active .tab-content {
+    display: inline-block;
+}
+
+.tab.active .tab-content {
+    display: block;
+}
+
+.tab.active .learn-more {
+    display: inline-block;
+    color: #e11d48;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.tab.active p {
+    display: block;
+}
+
+/* --- Feature Image & Floating Card --- */
+.feature-image {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-image .main-img {
+    width: 70%;
+    height: 500px;
+    border-radius: 15px;
+    display: block;
+    object-fit: cover;
+}
+
+.floating-card {
+    position: absolute;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-left-card {
+    width: max-content; 
+    padding: 15px 25px;
+    bottom: 50px;       
+    left: -110px;  
+    gap: 15px;
+}
+
+.stat-highlight {
+    color: #e11d48;
+    font-size: 42px;
+    font-weight: 700;
+    font-family: "Caveat", cursive;
+}
+
+.stat-text {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.features-script-text {
+    position: absolute;
+    bottom: -30px; 
+    left: -40px;    
+    font-family: "Cedarville Cursive", 'Brush Script MT', cursive; 
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+@media (max-width: 1300px){
+.ds_none {
+    display: none !important;
+}
+}
+/* --- Features Media Queries --- */
+@media (max-width: 768px) {
+    .features-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .features {
+        padding: 40px 20px;
+    }
+
+    .features-header h2 {
+        font-size: 35px;
+    }
+    .features-header p {
+        font-size: 12px;
+    }
+
+
+    .feature-image .main-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .bottom-left-card, 
+    .features-script-text {
+        display: none;
+    }
+}

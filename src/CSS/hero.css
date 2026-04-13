@@ -1,0 +1,113 @@
+/* KEEP ONLY THIS IN hero.css */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 51px !important;
+    color: white;
+}
+
+p{
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 18px !important;
+    color: #94a3b8;
+}
+
+
+/* .video_block{
+    top: 100px;
+} */
+.video-modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 9999; /* On top of everything */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.85); /* Dark semi-transparent background */
+    align-items: center;
+    justify-content: center;
+}
+
+/* When JS adds the 'active' class, it becomes visible */
+.video-modal.active {
+    display: flex; 
+}
+
+.modal-content-box {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    background: #000;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.close-video {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.close-video:hover {
+    color: #e11d48;
+}
+
+/* This trick ensures the YouTube video stays in a perfect 16:9 rectangle */
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.back_white{
+    background-color: white;
+}
+
+/* ADD THIS ABOVE THE 768px MEDIA QUERY */
+
+@media (max-width: 1300px) {
+  .ds_none {
+    display: none !important;
+  }
+}
+
+/* ADD THIS TO THE BOTTOM OF YOUR hero.css */
+
+@media (max-width: 768px) {
+    /* 1. Shrink the massive heading for mobile */
+    h1 {
+        font-size: 36px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* 2. Slightly shrink the paragraph for better reading */
+    p {
+        font-size: 15px !important;
+    }
+
+    /* 3. Pull the video block up so it stops heavily overlapping the next section */
+    .video_block {
+        top: 40px !important; 
+    }
+}
