@@ -1,0 +1,41 @@
+/* =========================================
+   TRUSTED BY SECTION
+   ========================================= */
+
+.trusted-by {
+    text-align: center;
+    padding: 300px 20px 60px;
+    position: relative;
+    background-color: #fff;
+}
+
+.trusted-by h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: "Roboto", sans-serif !important;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* --- Trusted By Media Queries --- */
+@media (max-width: 768px) {
+    .trusted-by {
+        padding-top: 160px; /* Reduces the massive gap on mobile */
+    }
+
+    .trusted-by h2{
+        font-size: 35px; /* Scales down the heading for smaller screens */
+
+    }
+}
